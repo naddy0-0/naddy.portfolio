@@ -1,0 +1,956 @@
+:root {
+    /* Refined Color Palette - High Energy, Eye-Friendly */
+    --joy-pink: #FFD1DC;    
+    --joy-blue: #B3E5FC;    
+    --joy-yellow: #FFF9C4;  
+    --text-dark: #2D3436;   
+    --white: #FFFFFF;
+
+    /* Spacing & Ratio Variables - 8px grid rule */
+    --padding-section: 120px 10%; 
+    --padding-card: 60px;         
+    --border-radius: 32px;        
+    --border-thick: 3px;          
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.5; 
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- CLEAN & CLEAR NAVIGATION --- */
+
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%; /* More vertical height for a premium feel */
+    background: var(--white);
+    border-bottom: 3px solid var(--text-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* This is the "Magic Gap" that stops them from being too close */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 800; /* Bold makes it clearer to see */
+    font-size: 0.9rem;
+    letter-spacing: 2px; /* Professional spacing between letters */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* The "Joyful" Hover Effect */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 10px;
+    background-color: var(--joy-yellow); /* Sunny Yellow highlight */
+    bottom: -5px;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-item:hover {
+    color: var(--text-dark);
+}
+
+.nav-item:hover::after {
+    width: 100%; /* Line grows when you hover */
+}
+
+/* Making the Logo stand out */
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Ensure the LET'S TALK button stays consistent */
+.contact-pill {
+    margin-left: 20px;
+    background: var(--text-dark);
+    color: white !important;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+/* 2. Hero Section - Solid Sunbeam Layout, Power Ratio */
+.hero {
+    padding: var(--padding-section);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--joy-yellow); /* Solid Yellow background */
+    border-bottom: var(--border-thick) solid var(--text-dark);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* 60/40 Split Ratio */
+    gap: 80px; 
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.uni-tag {
+    background: var(--white);
+    padding: 8px 18px;
+    border: var(--border-thick) solid var(--text-dark);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem); 
+    line-height: 0.95;
+    margin-bottom: 32px;
+}
+
+.pop-color {
+    background: var(--joy-pink);
+    padding: 0 12px;
+    display: inline-block;
+    border: var(--border-thick) solid var(--text-dark);
+    transform: rotate(-1deg);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--text-dark);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Hero Visual Box - No Blurs, Solid Shadows */
+.hero-visual {
+    position: relative;
+    padding: 20px;
+}
+
+/* Image Fit and Size Fix */
+.profile-img {
+    border: var(--border-thick) solid var(--text-dark);
+    border-radius: var(--border-radius);
+    max-width: 100%; /* Ensure it doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    box-shadow: 10px 10px 0px var(--joy-pink); /* Solid Pink "Sticker" shadow */
+    object-fit: contain; /* Ensure the whole photo is visible within the 60/40 split */
+}
+
+/* Remove all glow/reflection blobs */
+.shape-blob { display: none; } 
+
+/* 3. About Section - Full-Color Joy, Solid & Bright */
+.about-section { 
+    padding: var(--padding-section);
+    background-color: var(--joy-blue); /* Fills screen with Blue */
+}
+
+.about-card {
+    background: var(--white);
+    padding: var(--padding-card);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: 64px; 
+    border: var(--border-thick) solid var(--text-dark);
+    box-shadow: 20px 20px 0px var(--text-dark); /* Bold, attractive shadow */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-content { flex: 1.5; }
+
+.about-content h2 { 
+    font-size: 2.8rem;
+    font-family: 'Syne', sans-serif;
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    margin-bottom: 32px;
+    max-width: 90%;
+    color: #555;
+}
+
+.skill-pill {
+    display: inline-block;
+    background: var(--joy-yellow);
+    padding: 10px 22px;
+    border: 2px solid var(--text-dark);
+    margin: 6px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+/* 4. Stats Section - Clean Lines, Vertical Alignment */
+.about-stats {
+    flex: 1;
+    border-left: var(--border-thick) solid var(--text-dark);
+    padding-left: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.stat-box {
+    position: relative;
+}
+
+.stat-box h3 {
+    font-size: 3.8rem;
+    line-height: 1;
+    color: var(--text-dark);
+    background: var(--joy-pink); /* Chinese box is Pink */
+    display: inline-block;
+    padding: 4px 12px;
+    border: var(--border-thick) solid var(--text-dark);
+}
+
+/* Korean box is Blue to balance */
+.stat-box:nth-child(2) h3 {
+    background: var(--joy-blue);
+}
+
+.stat-box p {
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* Small tag for certificate name */
+.sub-tag {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    opacity: 0.6;
+    text-transform: uppercase;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1100px) {
+    .hero-inner, .about-card { 
+        grid-template-columns: 1fr; 
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+    }
+    .about-stats { 
+        border-left: none; 
+        border-top: var(--border-thick) solid var(--text-dark); 
+        padding: 40px 0 0 0; 
+    }
+    h1 { font-size: 3.5rem; }
+}
+
+/* --- CHAT MODAL STYLES --- */
+
+/* 1. The Dark Background Overlay */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(45, 52, 54, 0.8); /* Dims the rest of the screen */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 2. Show the Modal when Active */
+.modal-overlay.active {
+    display: flex; /* JavaScript triggers this */
+}
+
+/* 3. The Chat Box Container */
+.chat-container {
+    width: 100%;
+    max-width: 450px; /* Perfect width for a chat window */
+    background: var(--white);
+    border: var(--border-thick) solid var(--text-dark);
+    border-radius: var(--border-radius);
+    box-shadow: 20px 20px 0px var(--joy-pink); /* Attractive Pink Shadow */
+    overflow: hidden;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 4. Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: var(--joy-yellow); /* Sunny Yellow Header */
+    border-bottom: var(--border-thick) solid var(--text-dark);
+}
+
+.close-btn {
+    background: var(--text-dark);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 35px; height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 5. Message Area */
+.message-board {
+    height: 350px;
+    padding: 24px;
+    background: #fdfdfd;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 2px solid var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.incoming { align-self: flex-start; background: var(--joy-blue); } /* Blue for others */
+.outgoing { align-self: flex-end; background: var(--joy-pink); }  /* Pink for you */
+
+/* 6. Input Area */
+.chat-input-area {
+    padding: 16px;
+    background: var(--white);
+    border-top: var(--border-thick) solid var(--text-dark);
+    display: flex; 
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--text-dark);
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.send-btn {
+    background: var(--text-dark);
+    color: white;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* --- SOCIAL LINKS STYLES --- */
+
+.social-links {
+    margin-top: 32px;
+}
+
+.social-label {
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.social-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-pill {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border: 2px solid var(--text-dark);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    background: var(--white);
+}
+
+/* Individual Hover Colors for Joyful Energy */
+.social-pill.email:hover { background: var(--joy-yellow); transform: translateY(-5px); }
+.social-pill.fb:hover { background: var(--joy-blue); transform: translateY(-5px); }
+.social-pill.ig:hover { background: var(--joy-pink); transform: translateY(-5px); }
+.social-pill.tk:hover { background: var(--text-dark); color: var(--white); transform: translateY(-5px); }
+
+/* Add a solid shadow to the row for that "Sticker" feel */
+.social-pill {
+    box-shadow: 4px 4px 0px var(--text-dark);
+}
+
+.social-pill:active {
+    box-shadow: 0px 0px 0px var(--text-dark);
+    transform: translateY(2px);
+}
+
+/* --- PROJECT SECTION STYLES --- */
+
+.project-section {
+    padding: var(--padding-section);
+    background-color: var(--white);
+}
+
+.section-title h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: var(--border-thick) solid var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for Energy */
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Color Coding for Joy */
+.p2p { background-color: var(--joy-blue); box-shadow: 12px 12px 0px var(--joy-pink); }
+.tracker { background-color: var(--joy-yellow); box-shadow: 12px 12px 0px var(--text-dark); }
+.sales { background-color: var(--joy-pink); box-shadow: 12px 12px 0px var(--joy-blue); }
+
+.card-tag {
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background: var(--white);
+    display: inline-block;
+    padding: 5px 12px;
+    border: 2px solid var(--text-dark);
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgba(45, 52, 54, 0.8);
+    margin-bottom: 30px;
+}
+
+.view-btn {
+    text-decoration: none;
+    color: var(--white);
+    background: var(--text-dark);
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+.modal-overlay.active { display: flex; }
+
+.capsule-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.capsule-form input, .capsule-form textarea {
+    padding: 15px;
+    border: 3px solid #000;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+.capsule-form textarea { height: 120px; resize: none; }
+
+.submit-pill {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.submit-pill:hover {
+    background: var(--joy-pink);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.skills-section { padding: 60px 10%; text-align: center; }
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tag {
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* Category Colors */
+.tag.ke { background: #B8E4F0; }      /* Joy Blue */
+.tag.content { background: #FFCFEF; } /* Joy Pink */
+.tag.soft { background: #E2F0CB; }    /* Soft Green */
+
+.tag:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 4px 4px 0px #000;
+}
+
+/* --- THE FINAL DARK MODE OVERRIDE --- */
+
+/* 1. The Main Container Reset */
+[data-theme="dark"] {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* 2. Target EVERY SINGLE CHILD element */
+[data-theme="dark"] * {
+    background-color: transparent !important; /* Prevents hidden black boxes */
+    color: #ffffff !important;               /* Forces all text to white */
+    border-color: #444444 !important;        /* Makes borders visible */
+}
+
+/* 3. Re-build the Card Visibility */
+[data-theme="dark"] .project-card, 
+[data-theme="dark"] section,
+[data-theme="dark"] .glass-nav {
+    background-color: #1a1a1a !important; /* Dark grey for background depth */
+}
+
+/* 4. The "Bright Button" Fix */
+[data-theme="dark"] .social-pill, 
+[data-theme="dark"] .tag, 
+[data-theme="dark"] .contact-pill,
+[data-theme="dark"] button {
+    background-color: #ffffff !important; 
+    color: #000000 !important;           /* Black text on white buttons */
+}
+
+/* 5. Keep your Pink Aesthetic */
+[data-theme="dark"] .dot, 
+[data-theme="dark"] span.accent, 
+[data-theme="dark"] .logo b {
+    color: #FFCFEF !important; 
+}
+
+[data-theme="dark"] p, [data-theme="dark"] h1, [data-theme="dark"] h2 {
+    text-shadow: 0px 0px 1px rgba(255,255,255,0.1);
+}
+
+/* --- GITHUB SECTION: BRIGHT & JOYFUL --- */
+
+.github-section {
+    padding: 100px 20px;
+    text-align: center;
+    /* A bright, airy gradient that fades from white to a joyful soft pink */
+    background: linear-gradient(135deg, #ffffff 0%, #fff0f6 50%, #ffe3f2 100%);
+    border-top: 1px solid #ffeef8;
+}
+
+.github-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    /* Pure white card so it "pops" against the pink background */
+    background-color: #ffffff; 
+    border: 1px solid rgba(255, 207, 239, 0.3);
+    border-radius: 30px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    /* A softer, pinker shadow for a joyful vibe */
+    box-shadow: 0 20px 40px rgba(255, 182, 193, 0.15);
+}
+
+.github-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: #FFCFEF;
+    box-shadow: 0 30px 60px rgba(255, 207, 239, 0.4);
+}
+
+.github-icon {
+    font-size: 3.5rem;
+    /* Let's make the icon pop with your Joy Pink! */
+    color: #FFCFEF; 
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+.github-card h3 {
+    color: #333333;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.github-text {
+    color: #777777;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* The Button: Keeping it bold but clean */
+.github-btn {
+    margin-top: 10px;
+    padding: 14px 35px;
+    background-color: #000000;
+    color: #ffffff !important;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #FFCFEF;
+    color: #000000 !important;
+    transform: scale(1.05);
+}
+
+/* --- DARK MODE (Keeps it OLED Black) --- */
+[data-theme="dark"] .github-section {
+    background: #000000 !important;
+    border-top: 1px solid #111;
+}
+
+[data-theme="dark"] .github-card {
+    background-color: #0a0a0a !important;
+    border: 1px solid #222 !important;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .github-icon {
+    color: #FFCFEF !important;
+}
+
+[data-theme="dark"] .github-card h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .github-btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* --- GITHUB SECTION: BRIGHT & JOYFUL --- */
+
+.github-section {
+    padding: 100px 20px;
+    text-align: center;
+    /* A bright, airy gradient that fades from white to a joyful soft pink */
+    background: linear-gradient(135deg, #ffffff 0%, #fff0f6 50%, #ffe3f2 100%);
+    border-top: 1px solid #ffeef8;
+}
+
+.github-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    /* Pure white card so it "pops" against the pink background */
+    background-color: #ffffff; 
+    border: 1px solid rgba(255, 207, 239, 0.3);
+    border-radius: 30px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    /* A softer, pinker shadow for a joyful vibe */
+    box-shadow: 0 20px 40px rgba(255, 182, 193, 0.15);
+}
+
+.github-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: #FFCFEF;
+    box-shadow: 0 30px 60px rgba(255, 207, 239, 0.4);
+}
+
+.github-icon {
+    font-size: 3.5rem;
+    /* Let's make the icon pop with your Joy Pink! */
+    color: #FFCFEF; 
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+.github-card h3 {
+    color: #333333;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.github-text {
+    color: #777777;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* The Button: Keeping it bold but clean */
+.github-btn {
+    margin-top: 10px;
+    padding: 14px 35px;
+    background-color: #000000;
+    color: #ffffff !important;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #FFCFEF;
+    color: #000000 !important;
+    transform: scale(1.05);
+}
+
+/* --- DARK MODE (Keeps it OLED Black) --- */
+[data-theme="dark"] .github-section {
+    background: #000000 !important;
+    border-top: 1px solid #111;
+}
+
+[data-theme="dark"] .github-card {
+    background-color: #0a0a0a !important;
+    border: 1px solid #222 !important;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .github-icon {
+    color: #FFCFEF !important;
+}
+
+[data-theme="dark"] .github-card h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .github-btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* --- EXPERIENCE SECTION: UPDATED YELLOW VIBE --- */
+
+.experience-section {
+    padding: 100px 20px;
+    /* Changed to a soft, joyful sunshine yellow */
+    background-color: #fffeeb; 
+}
+
+.experience-timeline {
+    max-width: 800px;
+    margin: 60px auto;
+    position: relative;
+    /* Changed border to a warm yellow-gold tone */
+    border-left: 3px solid rgba(255, 230, 0, 0.2); 
+    padding-left: 50px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    transition: all 0.4s ease;
+}
+
+/* The Dot: Now matches the Joyful Yellow theme */
+.timeline-dot {
+    position: absolute;
+    left: -61.5px; 
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    /* Primary Joy Yellow for the dot */
+    background-color: #FFD93D; 
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 217, 61, 0.4);
+    z-index: 2;
+}
+
+/* The Content: Clean White Card */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 24px;
+    /* Subtle border to keep it crisp against the light yellow bg */
+    border: 1px solid rgba(255, 217, 61, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+    /* Highlight border on hover using a stronger yellow */
+    border-color: #FFD93D;
+    box-shadow: 0 15px 35px rgba(255, 217, 61, 0.15);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 800;
+    /* Changed date text to a readable golden-yellow */
+    color: #D4A017;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.location {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.details {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* --- DARK MODE: OLED UNIFIED (Remains Pure Black) --- */
+
+[data-theme="dark"] .experience-section {
+    background-color: #000000 !important;
+}
+
+[data-theme="dark"] .experience-timeline {
+    border-left: 3px solid #1a1a1a !important;
+}
+
+[data-theme="dark"] .timeline-dot {
+    border-color: #000000 !important;
+    /* Keep the dot bright yellow in dark mode for a cool "neon" look */
+    background-color: #FFD93D !important;
+}
+
+[data-theme="dark"] .timeline-content {
+    background-color: #0a0a0a !important; 
+    border: 1px solid #222 !important;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .timeline-content h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .details {
+    color: #bbbbbb !important;
+}
+
+[data-theme="dark"] .timeline-item:hover .timeline-dot {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 15px #ffffff;
+}

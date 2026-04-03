@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naddy | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+</head>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+<body>
+    
+ <nav class="glass-nav">
+    <div class="logo">can call me NADDY<b>.</b></div>
+    <div class="nav-links">
+        <a href="#projects"> PROJECTS </a>
+        <a href="#about">ABOUT</a>
+       <a href="mailto:naddylinaung555@gmail.com?subject=Contact%20from%20Portfolio" class="contact-pill">
+    CONTACT ME
+</a>
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+       
+</nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="uni-tag">FROM University of Computer Studies, Yangon</span>
+                <h1>Logic Meets <br><span class="pop-color">Creativity.</span></h1>
+                <p>Knowledge Engineering student building smart systems and aesthetic digital content. And eager to learn new things and a quick learner.
+
+                </p>
+                <a href="#projects" class="btn-primary">View My Projects</a>
+            </div>
+            <div class="hero-visual">
+                <div class="shape-blob"></div>
+                <img src="naddy.png" alt="Naddy" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="about-card">
+            <div class="about-content">
+                <h2>ABOUT ME</h2>
+                <p>I'm a 4th-year student at <b>UCSY</b> specializing in <b>Knowledge Engineering</b>. I bridge the gap between technical backend development in <b>Python/Django</b> and lifestyle vlogging.</p>
+                
+                <div class="skills-row">
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">Django</div>
+                    <div class="skill-pill">Full-Stack</div>
+                    <div class="skill-pill">Machine Learning</div>
+                    <div class="skill-pill">Canvas</div>
+                </div>
+
+                <div class="social-links">
+    <p class="social-label">Find me on:</p>
+    <div class="social-row">
+        <a href="mailto:naddylinaung555@gmail.com?subject=Contact from Portfolio" class="social-pill email">Email</a>
+        <a href="https://www.facebook.com/share/16yXC13hWJ/?mibextid=wwXIfr" class="social-pill fb">Facebook</a>
+        <a href="https://www.instagram.com/allabout_naddy?igsh=MTRsZHloYXFmdThseA==" class="social-pill ig">Instagram</a>
+        <a href="https://www.tiktok.com/@naddy_lin_aung_?_r=1&_t=ZS-95AbiOW88JO"  class="social-pill tk">TikTok</a>
+    </div>
+</div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>HSK1 </h3>
+                    <p>Chinese Proficiency</p>
+                </div>
+                <div class="stat-box">
+                    <h3>TOPIK1 </h3>
+                    <p>
+                        Korean Proficiency
+                    </p>
+                </div>
+                <div class="stat-box">
+                    <h3>B2-C1</h3>
+                    <p>English Level</p>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="experience-section">
+    
+    <div class="experience-timeline">
+        <div class="experience-timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022-2024</div>
+                <div class="timeline-content">
+                    <h3>Volunteered as a content writer</h3>
+                    <p class="location">New Horizons Organization (non-profit)• Yangon</p>
+                    <p class="details">Writing contents about knowledge sharing, educatioion news especially scholarhips, announcing events & recuriting volunteers </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 — present</div>
+                <div class="timeline-content">
+                    <h3>Digital Content Creator</h3>
+                    <p class="location">Naddy Reviews • TikTok</p>
+                    <p class="details">Curating aesthetic vlogs and food reviews. Managing a consistent brand identity for a growing digital audience.</p>
+                </div>
+            </div>
+
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 — present</div>
+                <div class="timeline-content">
+                    <h3>Volunteer as a member of women entrepreneur team</h3>
+                    <p class="location">NextGen Impact Organization(non-profit) • Yangon</p>
+                    <p class="details">Held meeting and brainstorm about what kind of content and events to give the audience especially related about women intreprenure. Also write contents about them.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022— present </div>
+                <div class="timeline-content">
+                    <h3>Knowledge Engineering Student</h3>
+                    <p class="location">UCSY • University Status</p>
+                    <p class="details">Focusing on AI Engineering and Robotics. Building a foundation in computer science and professional English.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+    
+    <section id="projects" class="project-section">
+    <div class="section-title">
+        <h2>VIEW MY PROJECTS & WORKS 
+            <span>.</span></h2>
+    </div>
+
+    <div class="project-grid">
+        <div class="project-card p2p">
+            <div class="card-tag">Django + Python</div>
+            <h3>Peer-to-Peer Education</h3>
+            <p>A full-stack platform for students and instructors with admin approval logic.</p>
+            <div class="card-footer">
+                <a href="project/p2p/home.html" class="view-btn">View Website </a>
+            </div>
+        </div>
+
+        <div class="project-card tracker">
+            <div class="card-tag">Mobile App</div>
+            <h3>Routine Tracker</h3>
+            <p>A mobile application designed to track daily habits and productivity cycles.</p>
+            <div class="card-footer">
+                <a href="https://github.com/naddy0-0/Routine-Tracker-Android-App.git" class="view-btn">View App</a>
+            </div>
+        </div>
+
+        <div class="project-card sales">
+            <div class="card-tag">PowerBI + Data Mining</div>
+            <h3>Grocery Sales Prediction</h3>
+            <p>Data mining project focused on predicting grocery trends using PowerBI.</p>
+            <div class="card-footer">
+                <a href="https://github.com/naddy0-0/Grocery-Sales-POWERBI.git" class="view-btn">View Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Dedicated GitHub Section -->
+<section class="github-section">
+    <div class="github-container">
+        <h2 class="section-title">Technical <span class="accent">Workspace.</span></h2>
+        <p class="github-text">Explore My Repositories, Python/Django projects.</p>
+        
+        <div class="github-card">
+            <i class="ri-github-fill github-icon"></i>
+            <h3>@naddy0-0</h3>
+            <p>Building intelligent systems & digital solutions.</p>
+            <a href="https://github.com/naddy0-0" target="_blank" class="github-btn">
+                View Repositories <i class="ri-arrow-right-up-line"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    
+
+<section class="skills-section">
+    <h3>CORE COMPETENCIES<span>.</span></h3>
+    <div class="skill-tags">
+        <span class="tag ke">Knowledge Engineering</span>
+        <span class="tag ke">Data Mining</span>
+        <span class="tag ke">Python/Django</span>
+        
+        <span class="tag content">Digital Strategy</span>
+        <span class="tag content">Video Editing</span>
+        <span class="tag content">Aesthetic Branding</span>
+        
+        <span class="tag soft">Language Skills </span>
+        <span class="tag soft">Quick Learner</span>
+    </div>
+</section>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
