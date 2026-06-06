@@ -954,3 +954,189 @@ h1 {
     background-color: #ffffff !important;
     box-shadow: 0 0 15px #ffffff;
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVE OVERRIDES (Targeting viewports under 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    :root {
+        /* Scale section space down so sections don't take up the whole screen */
+        --padding-section: 60px 6%; 
+        --padding-card: 30px 20px;         
+        --border-radius: 20px;        
+    }
+
+    /* --- NAVIGATION RESPONSIVENESS --- */
+    .glass-nav {
+        padding: 15px 5%;
+        border-bottom-width: 2px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 15px; /* Shrings the desktop "Magic Gap" so elements fit */
+    }
+
+    .nav-item {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-pill {
+        margin-left: 5px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+    }
+
+    #theme-toggle {
+        font-size: 1rem;
+    }
+
+    /* --- HERO SECTION RESPONSIVENESS --- */
+    .hero {
+        padding-top: 100px; /* Accounts for the sticky navigation banner */
+        min-height: auto;
+    }
+
+    .hero-inner {
+        /* Changes side-by-side split into a clean single vertical column */
+        grid-template-columns: 1fr; 
+        gap: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        line-height: 1.05;
+        margin-bottom: 20px;
+    }
+
+    .pop-color {
+        padding: 4px 8px;
+        border-width: 2px;
+    }
+
+    .hero-visual {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-img {
+        max-width: 260px;
+        border-width: 2px;
+        box-shadow: 6px 6px 0px var(--joy-pink); /* Scaled down sticker shadow */
+    }
+
+    /* --- ABOUT SECTION RESPONSIVENESS --- */
+    .about-card {
+        flex-direction: column; /* Stacks description card above statistics layout */
+        gap: 40px;
+        border-width: 2px;
+        box-shadow: 10px 10px 0px var(--text-dark); /* Reduces offset so it fits on screens */
+    }
+
+    .about-content p {
+        max-width: 100%;
+        font-size: 1.05rem;
+        text-align: left;
+    }
+
+    .skills-row {
+        text-align: left;
+    }
+
+    .skill-pill {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+        margin: 4px;
+    }
+
+    /* --- STATISTICS SECTION RESPONSIVENESS --- */
+    .about-stats {
+        border-left: none;
+        /* Replaces the desktop side border with a top divider line */
+        border-top: 2px solid var(--text-dark); 
+        padding-left: 0;
+        padding-top: 40px;
+        gap: 30px;
+    }
+
+    .stat-box h3 {
+        font-size: 2.8rem;
+        border-width: 2px;
+    }
+
+    /* --- EXPERIENCE SECTION RESPONSIVENESS --- */
+    .experience-section {
+        padding: 60px 15px;
+    }
+
+    .experience-timeline {
+        margin: 30px auto;
+        padding-left: 25px; /* Shuts down awkward margins on small displays */
+    }
+
+    .timeline-dot {
+        left: -36.5px; /* Re-aligns time tracker dots perfectly down the spine */
+        top: 26px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.25rem;
+    }
+
+    /* --- PROJECTS SECTION RESPONSIVENESS --- */
+    .section-title h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Forces portfolio items into full-width stacks */
+        gap: 25px;
+    }
+
+    .project-card {
+        padding: 25px;
+        min-height: auto; /* Lets short text render naturally without empty dead space */
+        box-shadow: 8px 8px 0px var(--text-dark) !important; /* Unified crisp offsets */
+    }
+    
+    .project-card.p2p { box-shadow: 8px 8px 0px var(--joy-pink) !important; }
+    .project-card.sales { box-shadow: 8px 8px 0px var(--joy-blue) !important; }
+
+    .project-card h3 {
+        font-size: 1.6rem;
+    }
+
+    /* --- CHAT MODAL RESPONSIVENESS --- */
+    .chat-container {
+        max-width: 100%;
+        box-shadow: 10px 10px 0px var(--joy-pink);
+    }
+    
+    .message-board {
+        height: 300px;
+        padding: 15px;
+    }
+
+    /* --- WORKSPACE SECTION RESPONSIVENESS --- */
+    .github-section {
+        padding: 60px 15px;
+    }
+
+    .github-card {
+        padding: 35px 20px;
+    }
+}
